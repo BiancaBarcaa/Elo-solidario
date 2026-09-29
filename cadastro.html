@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Elo Solidário</title>
+    <meta
+      name="description"
+      content="Cadastre-se como colaborador da Elo Solidário e escolha como ajudar: doando ou como voluntário. Preencha o formulário e nossa equipe entra em contato.">
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="img/elo-solidario-logo.png"
+        width="200"
+        height="67"
+        alt="Elo Solidário">
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="cadastro.html">Cadastro</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Cadastro para novos colaboradores</h1>
+        <p>
+          Preencha o formulário para se cadastrar como colaborador da Elo
+          Solidário, seja doando ou como voluntário. Com os seus dados, nossa
+          equipe entra em contato para combinar como você quer ajudar e enviar
+          as próximas ações.
+        </p>
+
+        <form>
+          <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="CPF">CPF</label>
+            <input
+              type="text"
+              id="CPF"
+              name="CPF"
+              required
+              pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+              placeholder="000.000.000-00"
+              title="Formato: 000.000.000-00">
+
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+              placeholder="(00) 00000-0000"
+              title="Formato: (00) 00000-0000">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="data__nascimento">Data de Nascimento</label>
+            <input
+              type="date"
+              id="data__nascimento"
+              name="data__nascimento"
+              required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <label for="CEP">CEP</label>
+            <input
+              type="text"
+              id="CEP"
+              name="CEP"
+              required
+              pattern="[0-9]{5}-[0-9]{3}"
+              placeholder="00000-000"
+              title="Formato: 00000-000">
+
+            <label for="Endereço">Rua e Número</label>
+            <input type="text" id="Endereço" name="Endereço" required>
+
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Como quer ajudar?</legend>
+
+            <input type="radio" id="doar" name="ajuda" value="doar" required>
+            <label for="doar">Doar</label>
+
+            <input
+              type="radio"
+              id="voluntario"
+              name="ajuda"
+              value="voluntario">
+            <label for="voluntario">Ser voluntário</label>
+          </fieldset>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <address>
+        <p>Rua Solidariedade, 100 - São Paulo, SP</p>
+        <p>Email: contato@elosolidario.org</p>
+        <p>Telefone: (11) 99999-9999</p>
+        <p>Redes sociais: @elosolidario</p>
+      </address>
+
+      <p>&copy; 2026 Elo Solidário</p>
+    </footer>
+  </body>
+</html>
