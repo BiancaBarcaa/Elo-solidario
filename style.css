@@ -70,6 +70,25 @@ body {
 }
 
 
+.caixa__principal {
+  background-color: #132810;
+  padding: 2rem 0;
+  display: flow-root;
+}
+
+
+.texto__principal {
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.texto__secundario {
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:#54BD4F;
+}
+
 
 
 
