@@ -114,6 +114,16 @@ Durante o desenvolvimento deste projeto, pude aprimorar conhecimentos em:
 - Publicar o projeto utilizando GitHub Pages.
 - Integrar o formulário a um back-end para armazenar os cadastros em um servidor.
 
+🌿 Fluxo de Branches (GitFlow)
+
+O repositório segue o modelo GitFlow:
+
+- `main`: versão de lançamento, sempre estável.
+- `develop`: desenvolvimento contínuo, onde as funcionalidades são integradas.
+- `feature/*`: novas funcionalidades, criadas a partir da `develop` (ex.: `feature/estilizacao-css`).
+- `hotfix/*`: correções urgentes, criadas a partir da `main` (ex.: `hotfix/corrige-readme`).
+
+
  👩‍💻 Autora
 
 Bianca Barca
