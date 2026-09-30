@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos Elo Solidário</title>
+     <link rel="stylesheet" href="style.css">
     <meta
       name="description"
-      content="Conheça as iniciativas solidárias da Elo Solidário: cesta solidária, reforço escolar e horta comunitária. Veja como você pode apoiar.">
+      content="Conheça as iniciativas solidárias da Elo Solidário: cesta solidária, reforço escolar e horta comunitária. Veja como você pode apoiar."
+    />
   </head>
 
   <body>
@@ -15,12 +17,25 @@
         src="img/elo-solidario-logo.png"
         alt="Identidade visual da ONG Elo Solidário"
         width="200"
-        height="67">
+        height="67"
+      />
 
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="cadastro.html">Cadastro</a>
+    <nav class="menu">
+        <ul class="menu__lista">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Início</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link-ativo" href="projetos.html">Projetos</a>
+            <ul class="menu__submenu">
+              <li><a class="menu__sublink" href="projetos.html#como-doar">Como doar</a></li>
+              <li><a class="menu__sublink" href="projetos.html#voluntario">Seja Voluntário</a> </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__botao" href="cadastro.html">Cadastro</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -31,7 +46,7 @@
       </section>
 
       <section>
-        <h2>Como doar</h2>
+        <h2 id="como-doar">Como doar</h2>
         <p>
           Sua doação vira cestas de alimentos entregues às famílias que
           atendemos. Você pode contribuir de duas formas:
@@ -52,7 +67,8 @@
             src="img/cesta-solidaria.png"
             alt="Ícone de uma cesta solidária"
             width="80"
-            height="80">
+            height="80"
+          />
           <h3>Cesta Solidária</h3>
           <p>
             Distribuição de alimentos para famílias em situação de
@@ -62,14 +78,15 @@
       </section>
 
       <section>
-        <h2>Seja voluntário</h2>
+        <h2 id="voluntario">Seja voluntário</h2>
 
         <article>
           <img
             src="img/reforco-escolar.png"
             alt="Ícone de um livro aberto"
             width="80"
-            height="80">
+            height="80"
+          />
           <h3>Reforço Escolar</h3>
           <p>Apoio educacional para crianças e jovens da comunidade.</p>
         </article>
@@ -79,7 +96,8 @@
             src="img/horta-comunitaria.png"
             alt="Ícone de um vaso com uma plantinha"
             width="80"
-            height="80">
+            height="80"
+          />
           <h3>Horta Comunitária</h3>
           <p>Produção de alimentos saudáveis por meio do trabalho coletivo.</p>
         </article>

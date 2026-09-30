@@ -1,25 +1,44 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elo Solidário</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
+    <header class="cabecalho">
       <img
+        class="cabecalho__logo"
         src="img/elo-solidario-logo.png"
         width="200"
         height="67"
-        alt="logo elo solidário">
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="cadastro.html">Cadastro</a>
+        alt="logo elo solidário"
+      />
+
+      <nav class="menu">
+        <ul class="menu__lista">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Início</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link-ativo" href="projetos.html">Projetos</a>
+            <ul class="menu__submenu">
+              <li><a class="menu__sublink" href="projetos.html#como-doar">Como doar</a></li>
+              <li><a class="menu__sublink" href="projetos.html#voluntario">Seja Voluntário</a> </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__botao" href="cadastro.html">Cadastro</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main>
+      <div id="app">
+
+      </div>
       <section>
         <p>Voluntariado e solidariedade</p>
         <h1>Pequenos gestos, grandes transformações</h1>
@@ -29,8 +48,8 @@
         </p>
 
         <div class="botoes__Menu">
-          <a href="cadastro.html">Quero Ajudar</a>
-          <a href="projetos.html">Ver Projetos</a>
+          <a href="cadastro.html" data-link="">Quero Ajudar</a>
+          <a href="projetos.html" data-link="">Ver Projetos</a>
         </div>
 
         <div>
@@ -38,7 +57,8 @@
             src="img/foto-de-capa.jpg"
             width="250"
             height="150"
-            alt="Pessoas participando de uma ação solidária">
+            alt="Pessoas participando de uma ação solidária"
+          />
         </div>
       </section>
 
@@ -48,7 +68,8 @@
             src="img/quem-somos-nos.jpg"
             width="250"
             height="150"
-            alt="Voluntários organizando alimentos para doação">
+            alt="Voluntários organizando alimentos para doação"
+          />
 
           <h2>Quem Somos</h2>
           <p>

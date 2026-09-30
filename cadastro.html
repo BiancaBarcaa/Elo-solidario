@@ -1,26 +1,50 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro | Elo Solidário</title>
+    <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
-      content="Cadastre-se como colaborador da Elo Solidário e escolha como ajudar: doando ou como voluntário. Preencha o formulário e nossa equipe entra em contato.">
+      content="Cadastre-se como colaborador da Elo Solidário e escolha como ajudar: doando ou como voluntário. Preencha o formulário e nossa equipe entra em contato."
+    />
   </head>
 
   <body>
-    <header>
+    <header class="cabecalho">
       <img
+        class="cabecalho__logo"
         src="img/elo-solidario-logo.png"
         width="200"
         height="67"
-        alt="Elo Solidário">
+        alt="logo elo solidário"
+      />
 
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="cadastro.html">Cadastro</a>
+      <nav class="menu">
+        <ul class="menu__lista">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Início</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link-ativo" href="projetos.html">Projetos</a>
+            <ul class="menu__submenu">
+              <li>
+                <a class="menu__sublink" href="projetos.html#como-doar"
+                  >Como doar</a
+                >
+              </li>
+              <li>
+                <a class="menu__sublink" href="projetos.html#voluntario"
+                  >Seja Voluntário</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__botao" href="cadastro.html">Cadastro</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -34,12 +58,12 @@
           as próximas ações.
         </p>
 
-        <form>
+        <form id="formulario-cadastro" novalidate>
           <fieldset>
             <legend>Dados Pessoais</legend>
 
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" required />
 
             <label for="CPF">CPF</label>
             <input
@@ -49,7 +73,8 @@
               required
               pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
               placeholder="000.000.000-00"
-              title="Formato: 000.000.000-00">
+              title="Formato: 000.000.000-00"
+            />
 
             <label for="telefone">Telefone</label>
             <input
@@ -58,17 +83,24 @@
               name="telefone"
               pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
               placeholder="(00) 00000-0000"
-              title="Formato: (00) 00000-0000">
+              title="Formato: (00) 00000-0000"
+            />
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required />
 
             <label for="data__nascimento">Data de Nascimento</label>
             <input
               type="date"
               id="data__nascimento"
               name="data__nascimento"
-              required>
+              required
+            />
+            <span
+              id="erro-data-nascimento"
+              class="campo__erro"
+              role="alert"
+            ></span>
           </fieldset>
 
           <fieldset>
@@ -82,13 +114,14 @@
               required
               pattern="[0-9]{5}-[0-9]{3}"
               placeholder="00000-000"
-              title="Formato: 00000-000">
+              title="Formato: 00000-000"
+            />
 
             <label for="Endereço">Rua e Número</label>
-            <input type="text" id="Endereço" name="Endereço" required>
+            <input type="text" id="Endereço" name="Endereço" required />
 
             <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" name="cidade" required>
+            <input type="text" id="cidade" name="cidade" required />
 
             <label for="estado">Estado</label>
             <select id="estado" name="estado" required>
@@ -126,20 +159,28 @@
           <fieldset>
             <legend>Como quer ajudar?</legend>
 
-            <input type="radio" id="doar" name="ajuda" value="doar" required>
+            <input type="radio" id="doar" name="ajuda" value="doar" required />
             <label for="doar">Doar</label>
+            <span id="erro-ajuda" class="campo__erro" role="alert"></span>
 
             <input
               type="radio"
               id="voluntario"
               name="ajuda"
-              value="voluntario">
+              value="voluntario"
+            />
             <label for="voluntario">Ser voluntário</label>
           </fieldset>
 
           <button type="submit">Enviar</button>
         </form>
+
+        <div class="toast" id="toast-sucesso">
+          Solicitação registrada com sucesso.
+        </div>
       </section>
+      <h2>Últimos cadastros</h2>
+      <ul id="lista-cadastros"></ul>
     </main>
 
     <footer>
@@ -152,5 +193,6 @@
 
       <p>&copy; 2026 Elo Solidário</p>
     </footer>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
