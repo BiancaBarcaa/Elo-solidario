@@ -138,3 +138,45 @@ body {
 .campo__erro:empty {
   display: none;
 }
+
+--Alto contraste--
+
+.botao-contraste {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+body.alto-contraste {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste .cabecalho {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste a {
+  color: #ffff00;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ffff00;
+  outline-offset: 3px;
+}
