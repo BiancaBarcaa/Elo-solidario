@@ -33,6 +33,7 @@ Além disso, o projeto teve como objetivo colocar em prática conceitos fundamen
 - Aviso visual de confirmação após o envio do formulário.
 - Lista dos últimos cadastros salva no `localStorage`, que permanece mesmo após fechar o navegador.
 - Tratamento de falhas de carregamento das páginas e de dados corrompidos no armazenamento.
+- Modo de alto contraste, ativado por botão, para melhorar a leitura e a acessibilidade visual.
 
  🧩 Estrutura do Projeto
 
@@ -42,13 +43,12 @@ projeto-elo-solidario/
 ├── projetos.html
 ├── cadastro.html
 ├── style.css
-├── js/
-│   ├── main.js
-│   ├── router.js
-│   ├── templates.js
-│   ├── validacao.js
-│   ├── formulario.js
-│   └── storage.js
+├── main.js
+├── router.js
+├── templates.js
+├── validacao.js
+├── formulario.js
+├── storage.js
 └── img/
     ├── elo-solidario-logo.png
     ├── foto-de-capa.jpg
@@ -88,6 +88,12 @@ Os cadastros enviados (nome, e-mail e data do envio) são gravados no `localStor
 
 O código-fonte HTML foi submetido ao W3C Validator para verificar possíveis erros estruturais e garantir maior conformidade com os padrões do HTML5. Durante a validação, foram identificados apenas avisos informativos relacionados ao uso de barra final `/` em elementos vazios. As correções foram realizadas removendo essas barras, deixando o código mais adequado ao padrão HTML5. Não foram encontrados erros estruturais graves que comprometessem o funcionamento das páginas.
 
+ ♿ Acessibilidade Visual
+
+Foi adicionado um botão de alto contraste no cabeçalho da página inicial. Ao ser acionado, o JavaScript adiciona ou remove a classe `alto-contraste` no `body`, alterando as cores principais da interface para fundo preto, texto branco e links em amarelo.
+
+O botão também utiliza o atributo `aria-pressed`, indicando para tecnologias assistivas se o modo de alto contraste está ativo ou desativado. Além disso, foi usado `:focus-visible` no CSS para destacar melhor elementos focados durante a navegação por teclado.
+
 ▶️ Como Executar
 
 Como a navegação SPA usa `fetch` e módulos ES6, o projeto precisa ser aberto por um servidor local, e não clicando direto no arquivo. A forma mais simples é usar a extensão **Live Server** do Visual Studio Code: clique com o botão direito no `index.html` e escolha "Open with Live Server".
@@ -105,6 +111,7 @@ Durante o desenvolvimento deste projeto, pude aprimorar conhecimentos em:
 - Modularização do código com ES6 Modules.
 - Depuração com o Console e a aba Network do navegador.
 - Versionamento e publicação de projetos com Git e GitHub.
+- Aplicação de recursos de acessibilidade visual, como modo de alto contraste e destaque de foco.
 
  🔮 Melhorias Futuras
 
