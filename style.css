@@ -6,7 +6,7 @@ body {
 
 .cabecalho {
   background-color: #1a1a19;
-  margin: auto 0;
+  margin: 0 auto; /* 🛠️ CORRIGIDO: Era 'auto 0', o que é uma sintaxe inválida para margin horizontal/vertical combinada dessa forma */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -266,7 +266,7 @@ footer {
 /* RODAPÉ */
 
 .rodape {
-background-color: #1a1a19;
+  background-color: #1a1a19;
   color: #ffffff;
   text-align: center;
   padding: 32px 20px;
@@ -336,45 +336,91 @@ footer > p {
   display: none;
 }
 
-/*Alto contraste*/
+/* ==========================================================================
+   ALTO CONTRASTE (Padrões eMAG / WCAG com especificidade blindada)
+   ========================================================================== */
 
 .botao__contraste {
   background-color: transparent;
-  color: #0f6e56;             
-  border: 2px solid #000000; 
+  color: #ffffff;             /* 🛠️ AJUSTADO: Mudado de verde para branco para dar leitura perfeita no seu header preto */
+  border: 2px solid #ffffff;  /* 🛠️ AJUSTADO: Borda branca para destacar o botão no menu */
   padding: 6px 12px;
   cursor: pointer; 
   border-radius: 8px;       
 }
 
 body.alto-contraste {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
 
-body.alto-contraste header,
-body.alto-contraste footer,
-body.alto-contraste .cabecalho {
-  background-color: #000000;
-  color: #ffffff;
+/* Força todas as seções estruturais do seu projeto a ficarem pretas */
+body.alto-contraste .cabecalho,
+body.alto-contraste .destaque,
+body.alto-contraste .numeros,
+body.alto-contraste .quem__somos,
+body.alto-contraste .parte__escura,
+body.alto-contraste .rodape,
+body.alto-contraste .menu__submenu {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
 }
 
-body.alto-contraste a {
-  color: #ffff00;
+/* Remove fundos verdes e destaca os cards/containers com borda branca */
+body.alto-contraste .numeros__item,
+body.alto-contraste .chamada__cadastro__container {
+  background-color: #000000 !important;
+  border: 3px solid #ffffff !important;
 }
 
+/* Títulos importantes e métricas ganham o amarelo acessível */
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste .texto__principal,
+body.alto-contraste .texto__secundario,
+body.alto-contraste .numeros__valor,
+body.alto-contraste .chamada__cadastro__titulo {
+  color: #ffff00 !important;
+}
+
+/* Transforma botões verdes de ação em elementos de alto contraste */
+body.alto-contraste .menu__botao,
+body.alto-contraste .btn__ajudar,
+body.alto-contraste .btn__projetos,
+body.alto-contraste .chamada__cadastro__botao {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+  text-decoration: none !important;
+}
+
+/* Inverte a cor do próprio botão de contraste ao ser ativado */
+body.alto-contraste .botao__contraste {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Altera a linha verde de link ativo para amarelo */
+body.alto-contraste .menu__link-ativo {
+  border-bottom: 3px solid #ffff00 !important;
+  color: #ffff00 !important;
+}
+
+/* Acessibilidade de inputs, formulários e foco geral por teclado */
 body.alto-contraste input,
 body.alto-contraste select,
 body.alto-contraste button {
-  background-color: #000000;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
 }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #ffff00;
-  outline-offset: 3px;
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
 }
