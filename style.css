@@ -2,6 +2,8 @@ body {
   margin: 0;
 }
 
+/* MENU CABEÇALHO */
+
 .cabecalho {
   background-color: #1a1a19;
   margin: auto 0;
@@ -39,20 +41,19 @@ body {
   border-radius: 8px;
 }
 
-.menu__item{
-    position: relative;
+.menu__item {
+  position: relative;
 }
 
 .menu__submenu {
-    display:none;
-    position:absolute;
-    top: 100%;
-    left: 0;
-    list-style:none;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a19;
-
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a19;
 }
 .menu__item:hover .menu__submenu,
 .menu__item:focus-within .menu__submenu {
@@ -60,38 +61,234 @@ body {
 }
 
 .menu__sublink {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 8px 16px;
-    white-space: nowrap;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:1.2rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
 }
 
+/* CAIXA PRINCIPAL */
+.destaque {
+  background-color: #132810;
+  padding: 0;
+}
 
 .caixa__principal {
-  background-color: #132810;
-  padding: 2rem 0;
-  display: flow-root;
+  padding: 1rem 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-
 .texto__principal {
-  font-size: 2rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5rem;
+  max-width: 500px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
 }
 
 .texto__secundario {
   font-size: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:#54BD4F;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #54bd4f;
+}
+
+.texto__paragrafo {
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.botoes__acao {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn__ajudar {
+  background-color: #0f6e56;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.btn__projetos {
+  background-color: #132810;
+  border: 2px solid #0f6e56;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.conteudo__texto {
+  flex: 2;
+}
+
+.imagem__principal {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.imagem__principal img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+/* NUMERO DE PROJETOS */
+.numeros {
+  display:flex;
+  background-color:#1A1A19;
+  justify-content:center;
+}
+.numeros__item {
+  border:2px solid #303030;
+  padding:1rem 4rem;
+  margin:1rem;
+  border-radius:16px;
+  width: 300px;
+}
+
+.numeros__valor {
+  font-size:1.25rem;
+  color:#0F6E56;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align:center;
+}
+
+.numeros__descricao {
+  font-size:1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align:center;
+}
+
+/* QUEM SOMOS NOS */
+.quem__somos {
+  background-color: #1A1A19;
+}
+
+.quem__somos__container {
+  display:flex;
+}
+
+.quem__somos__imagem {
+  max-width: 100%;
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.quem__somos__principal {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+.quem__somos__paragrafo {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
 }
 
 
+/* CHAMADA PARA CADASTRO */
+.parte__escura,
+footer {
+  background-color: #1a1a19;
+  display: flow-root;
+  padding: 20px;
+}
 
+.parte__escura .chamada__cadastro {
+  background-color: transparent;
+}
 
+.chamada__cadastro__container {
+  border: 2px solid #0f6e56;
+  background-color: #0f6e56;
+  border-radius: 16px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.chamada__cadastro__titulo {
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.chamada__cadastro__descricao {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chamada__cadastro__botao {
+  text-decoration: none;
+  border: 2px solid white;
+  color: #0f6e56;
+  background-color: white;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 4px 8px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+background-color: #1a1a19;
+  color: #ffffff;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.rodape__contato p {
+  margin: 4px 0;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+footer > p {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #0f6e56;
+  font-size: 0.8rem;
+}
 
 
 .toast {
@@ -137,4 +334,49 @@ body {
 
 .campo__erro:empty {
   display: none;
+}
+
+/* Alto contraste */
+
+.botao-contraste {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #000000;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 2px solid #ffffff;
+}
+
+body.alto-contraste {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste .cabecalho {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste a {
+  color: #ffff00;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ffff00;
+  outline-offset: 3px;
 }
