@@ -336,17 +336,15 @@ footer > p {
   display: none;
 }
 
-/* Alto contraste */
+/*Alto contraste*/
 
-.botao-contraste {
+.botao__contraste {
   background-color: transparent;
-  color: white;
-  border: 2px solid #000000;
+  color: #0f6e56;             
+  border: 2px solid #000000; 
   padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border: 2px solid #ffffff;
+  cursor: pointer; 
+  border-radius: 8px;       
 }
 
 body.alto-contraste {
