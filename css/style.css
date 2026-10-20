@@ -153,39 +153,39 @@ body {
 
 /* NUMERO DE PROJETOS */
 .numeros {
-  display:flex;
-  background-color:#1A1A19;
-  justify-content:center;
+  display: flex;
+  background-color: #1a1a19;
+  justify-content: center;
 }
 .numeros__item {
-  border:2px solid #303030;
-  padding:1rem 4rem;
-  margin:1rem;
-  border-radius:16px;
+  border: 2px solid #303030;
+  padding: 1rem 4rem;
+  margin: 1rem;
+  border-radius: 16px;
   width: 300px;
 }
 
 .numeros__valor {
-  font-size:1.25rem;
-  color:#0F6E56;
+  font-size: 1.25rem;
+  color: #0f6e56;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align:center;
+  text-align: center;
 }
 
 .numeros__descricao {
-  font-size:1rem;
+  font-size: 1rem;
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align:center;
+  text-align: center;
 }
 
 /* QUEM SOMOS NOS */
 .quem__somos {
-  background-color: #1A1A19;
+  background-color: #1a1a19;
 }
 
 .quem__somos__container {
-  display:flex;
+  display: flex;
 }
 
 .quem__somos__imagem {
@@ -212,7 +212,6 @@ body {
   margin-top: 0.5rem;
   margin-left: 2rem;
 }
-
 
 /* CHAMADA PARA CADASTRO */
 .parte__escura,
@@ -290,6 +289,202 @@ footer > p {
   font-size: 0.8rem;
 }
 
+/* Projetos */
+.projetos__destaques {
+  background-color: #202020;
+  display: flow-root;
+  padding: 20px 40px;
+}
+
+.caixa__projetos p {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.projetos__descricao {
+  background-color: #1a1a19;
+  padding: 24px 20px;
+}
+
+.caixa__doar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 2px solid #3a3a38;
+  border-radius: 16px;
+  color: white;
+}
+
+.icone__cesta {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.icone__cesta:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.icones__projetos {
+  border: 2px solid #3a3a38;
+  border-radius: 16px;
+  padding: 20px;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.texto__sabermais {
+  font-size: 0.9rem;
+  color: green;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.texto__icones {
+  font-size: 1rem;
+  color: white;
+  font-family: arial, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.paragrafo__icones {
+  font-size: 0.9rem;
+  color: white;
+  font-family: arial, sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Cadastro */
+
+.cadastro__main {
+  background-color: #3a3a38;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cadastro__titulo {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cadastro__descricao {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.ultimos__cadastros {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.campo label {
+  display: block;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+}
+
+.campo input[type="radio"] {
+  width: auto;
+}
+
+#formulario-cadastro {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background-color: #1a1a19;
+  padding: 24px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  color: #10b981;
+  font: size 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+button {
+  background-color: #0f6e56;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.campo input,
+.campo select {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.opcoes {
+  display: flex;
+  gap: 16px;
+}
+
+.opcoes .opcao {
+  flex: 1;
+}
+
+.opcao:has(input:checked) {
+  border-color: #10b981;
+}
+
+input[type="radio"] {
+  accent-color: #10b981;
+}
+
+.cadastro__descricao {
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.ultimos__cadastros { 
+  display: flex;
+  flex-direction: column;
+}
+
+.ultimos__cadastros h2 {
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* TOAST DE SUCESSO */
 
 .toast {
   display: none;
@@ -342,11 +537,11 @@ footer > p {
 
 .botao__contraste {
   background-color: transparent;
-  color: #ffffff;             /* 🛠️ AJUSTADO: Mudado de verde para branco para dar leitura perfeita no seu header preto */
-  border: 2px solid #ffffff;  /* 🛠️ AJUSTADO: Borda branca para destacar o botão no menu */
+  color: #ffffff; /* 🛠️ AJUSTADO: Mudado de verde para branco para dar leitura perfeita no seu header preto */
+  border: 2px solid #ffffff; /* 🛠️ AJUSTADO: Borda branca para destacar o botão no menu */
   padding: 6px 12px;
-  cursor: pointer; 
-  border-radius: 8px;       
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 body.alto-contraste {
