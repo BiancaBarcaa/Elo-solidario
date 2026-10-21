@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos Elo Solidário</title>
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="/css/style.css">
     <meta
       name="description"
       content="Conheça as iniciativas solidárias da Elo Solidário: cesta solidária, reforço escolar e horta comunitária. Veja como você pode apoiar."
@@ -12,15 +12,16 @@
   </head>
 
   <body>
-    <header>
+   <header class="cabecalho">
       <img
+        class="cabecalho__logo"
         src="img/elo-solidario-logo.png"
-        alt="Identidade visual da ONG Elo Solidário"
         width="200"
         height="67"
+        alt="logo elo solidário"
       />
 
-    <nav class="menu">
+      <nav class="menu">
         <ul class="menu__lista">
           <li class="menu__item">
             <a class="menu__link" href="index.html">Início</a>
@@ -28,8 +29,12 @@
           <li class="menu__item">
             <a class="menu__link-ativo" href="projetos.html">Projetos</a>
             <ul class="menu__submenu">
-              <li><a class="menu__sublink" href="projetos.html#como-doar">Como doar</a></li>
-              <li><a class="menu__sublink" href="projetos.html#voluntario">Seja Voluntário</a> </li>
+              <li>
+                <a class="menu__sublink" href="projetos.html#como-doar">Como doar</a>
+              </li>
+              <li>
+                <a class="menu__sublink" href="projetos.html#voluntario">Seja Voluntário</a>
+              </li>
             </ul>
           </li>
           <li class="menu__item">
@@ -37,91 +42,118 @@
           </li>
         </ul>
       </nav>
+     <div class="acessibilidade">
+        <button class="botao__contraste" aria-label="Ativar alto contraste">Alto Contraste</button>
+      </div>
     </header>
 
     <main>
-      <section>
-        <h1 class="">Iniciativas Solidárias</h1>
+      <section class="projetos__destaques">
+        <div class="caixa__projetos">
+        <h1 class="texto__principal">Iniciativas Solidárias</h1>
         <p>Projetos que você pode apoiar agora</p>
+        </div>
       </section>
 
-      <section>
-        <h2 id="como-doar">Como doar</h2>
-        <p>
-          Sua doação vira cestas de alimentos entregues às famílias que
-          atendemos. Você pode contribuir de duas formas:
+      <div class="projetos__descricao">
+  <div class="caixa__doar">
+
+    <section>
+      <h2 id="como-doar">Como doar</h2>
+      <p class="texto__paragrafo">
+        Sua doação vira cestas de alimentos entregues às famílias que
+        atendemos. Você pode contribuir de duas formas:
+      </p>
+      <ul>
+        <li class="texto__paragrafo">
+          Alimentos não perecíveis: entregue na nossa sede, de segunda a
+          sexta, das 9h às 17h.
+        </li>
+        <li class="texto__paragrafo">
+          Contribuição financeira: faça um Pix para contato@elosolidario.org.
+        </li>
+      </ul>
+
+      <article>
+        <div class="icones__projetos">
+        <img class="icone__cesta"
+          src="img/cesta-solidaria.png"
+          alt="Ícone de uma cesta solidária"
+          width="80"
+          height="80"
+        />
+        <h3 class="texto__icones">Cesta Solidária</h3>
+        <p class="paragrafo__icones">
+          Distribuição de alimentos para famílias em situação de
+          vulnerabilidade.
         </p>
+        <p class="texto__sabermais">Clique na imagem para saber mais.</p>
+      </article>
+    </section>
+    
 
-        <ul>
-          <li>
-            Alimentos não perecíveis: entregue na nossa sede, de segunda a
-            sexta, das 9h às 17h.
-          </li>
-          <li>
-            Contribuição financeira: faça um Pix para contato@elosolidario.org.
-          </li>
-        </ul>
+    <section>
+      <div class="icones__projetos">
+      <h2 id="voluntario">Seja voluntário</h2>
 
-        <article>
-          <img
-            src="img/cesta-solidaria.png"
-            alt="Ícone de uma cesta solidária"
-            width="80"
-            height="80"
-          />
-          <h3>Cesta Solidária</h3>
-          <p>
-            Distribuição de alimentos para famílias em situação de
-            vulnerabilidade.
-          </p>
-        </article>
-      </section>
-
-      <section>
-        <h2 id="voluntario">Seja voluntário</h2>
-
-        <article>
-          <img
-            src="img/reforco-escolar.png"
-            alt="Ícone de um livro aberto"
-            width="80"
-            height="80"
-          />
-          <h3>Reforço Escolar</h3>
-          <p>Apoio educacional para crianças e jovens da comunidade.</p>
-        </article>
-
-        <article>
-          <img
-            src="img/horta-comunitaria.png"
-            alt="Ícone de um vaso com uma plantinha"
-            width="80"
-            height="80"
-          />
-          <h3>Horta Comunitária</h3>
-          <p>Produção de alimentos saudáveis por meio do trabalho coletivo.</p>
-        </article>
-      </section>
-
-      <section>
-        <h2>Faça parte dessa rede</h2>
-        <p>
-          Cadastre-se como colaborador e receba informações sobre as próximas
-          ações.
+      <article>
+        <img class="icone__cesta"
+          src="img/reforco-escolar.png"
+          alt="Ícone de um livro aberto"
+          width="80"
+          height="80"
+        />
+        <h3 class="texto__icones">Reforço Escolar</h3>
+        <p class="paragrafo__icones">
+          Apoio educacional para crianças e jovens da comunidade.
         </p>
-        <a href="cadastro.html">Ir para o cadastro</a>
-      </section>
+        <p class="texto__sabermais">Clique na imagem para saber mais.</p>
+      </article>
+      </div>
+
+      <article>
+        <div class="icones__projetos">
+        <img class="icone__cesta"
+          src="img/horta-comunitaria.png"
+          alt="Ícone de um vaso com uma plantinha"
+          width="80"
+          height="80"
+        />
+        <h3 class="texto__icones">Horta Comunitária</h3>
+        <p class="paragrafo__icones">
+          Produção de alimentos saudáveis por meio do trabalho coletivo.
+        </p>
+        <p class="texto__sabermais">Clique na imagem para saber mais.</p>
+      </article>
+    </section>
+    </div>
+
+  </div>
+</div>
+
+      <div class="parte__escura">
+        <section class="chamada__cadastro">
+          <div class="chamada__cadastro__container">
+            <h2 class="chamada__cadastro__titulo">Faça parte dessa rede</h2>
+            <p class="chamada__cadastro__descricao">
+              Cadastre-se como colaborador e receba informações sobre as próximas ações.
+            </p>
+            <a href="cadastro.html" class="chamada__cadastro__botao">Ir para Cadastro</a>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer>
-      <address>
+    <footer class="rodape">
+      <address class="rodape__contato">
         <p>Rua Solidariedade, 100 - São Paulo, SP</p>
         <p>Email: contato@elosolidario.org</p>
         <p>Telefone: (11) 99999-9999</p>
         <p>Redes sociais: @elosolidario</p>
       </address>
 
-      <p>&copy; 2026 Elo Solidário</p>
+      <p class="rodape__copyright">&copy; 2026 Elo Solidário</p>
     </footer>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

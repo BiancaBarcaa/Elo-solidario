@@ -1,0 +1,621 @@
+body {
+  margin: 0;
+}
+
+/* MENU CABEÇALHO */
+
+.cabecalho {
+  background-color: #1a1a19;
+  margin: 0 auto; /* 🛠️ CORRIGIDO: Era 'auto 0', o que é uma sintaxe inválida para margin horizontal/vertical combinada dessa forma */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+}
+.menu__lista {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__link,
+.menu__link-ativo,
+.menu__botao {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: none;
+}
+
+.menu__link-ativo {
+  border-bottom: 3px solid green;
+  padding-bottom: 5px;
+}
+
+.menu__botao {
+  background-color: #0f6e56;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a19;
+}
+.menu__item:hover .menu__submenu,
+.menu__item:focus-within .menu__submenu {
+  display: block;
+}
+
+.menu__sublink {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* CAIXA PRINCIPAL */
+.destaque {
+  background-color: #132810;
+  padding: 0;
+}
+
+.caixa__principal {
+  padding: 1rem 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.texto__principal {
+  font-size: 2.5rem;
+  max-width: 500px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+.texto__secundario {
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #54bd4f;
+}
+
+.texto__paragrafo {
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.botoes__acao {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn__ajudar {
+  background-color: #0f6e56;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.btn__projetos {
+  background-color: #132810;
+  border: 2px solid #0f6e56;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.conteudo__texto {
+  flex: 2;
+}
+
+.imagem__principal {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.imagem__principal img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+/* NUMERO DE PROJETOS */
+.numeros {
+  display: flex;
+  background-color: #1a1a19;
+  justify-content: center;
+}
+.numeros__item {
+  border: 2px solid #303030;
+  padding: 1rem 4rem;
+  margin: 1rem;
+  border-radius: 16px;
+  width: 300px;
+}
+
+.numeros__valor {
+  font-size: 1.25rem;
+  color: #0f6e56;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+.numeros__descricao {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+/* QUEM SOMOS NOS */
+.quem__somos {
+  background-color: #1a1a19;
+}
+
+.quem__somos__container {
+  display: flex;
+}
+
+.quem__somos__imagem {
+  max-width: 100%;
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.quem__somos__principal {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+.quem__somos__paragrafo {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}
+
+/* CHAMADA PARA CADASTRO */
+.parte__escura,
+footer {
+  background-color: #1a1a19;
+  display: flow-root;
+  padding: 20px;
+}
+
+.parte__escura .chamada__cadastro {
+  background-color: transparent;
+}
+
+.chamada__cadastro__container {
+  border: 2px solid #0f6e56;
+  background-color: #0f6e56;
+  border-radius: 16px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.chamada__cadastro__titulo {
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.chamada__cadastro__descricao {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chamada__cadastro__botao {
+  text-decoration: none;
+  border: 2px solid white;
+  color: #0f6e56;
+  background-color: white;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 4px 8px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+  background-color: #1a1a19;
+  color: #ffffff;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.rodape__contato p {
+  margin: 4px 0;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+footer > p {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #0f6e56;
+  font-size: 0.8rem;
+}
+
+/* Projetos */
+.projetos__destaques {
+  background-color: #202020;
+  display: flow-root;
+  padding: 20px 40px;
+}
+
+.caixa__projetos p {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.projetos__descricao {
+  background-color: #1a1a19;
+  padding: 24px 20px;
+}
+
+.caixa__doar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 2px solid #3a3a38;
+  border-radius: 16px;
+  color: white;
+}
+
+.icone__cesta {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.icone__cesta:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.icones__projetos {
+  border: 2px solid #3a3a38;
+  border-radius: 16px;
+  padding: 20px;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.texto__sabermais {
+  font-size: 0.9rem;
+  color: green;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.texto__icones {
+  font-size: 1rem;
+  color: white;
+  font-family: arial, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.paragrafo__icones {
+  font-size: 0.9rem;
+  color: white;
+  font-family: arial, sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Cadastro */
+
+.cadastro__main {
+  background-color: #3a3a38;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cadastro__titulo {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cadastro__descricao {
+  font-size: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.ultimos__cadastros {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.campo label {
+  display: block;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+}
+
+.campo input[type="radio"] {
+  width: auto;
+}
+
+#formulario-cadastro {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background-color: #1a1a19;
+  padding: 24px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  color: #10b981;
+  font: size 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+button {
+  background-color: #0f6e56;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.campo input,
+.campo select {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.opcoes {
+  display: flex;
+  gap: 16px;
+}
+
+.opcoes .opcao {
+  flex: 1;
+}
+
+.opcao:has(input:checked) {
+  border-color: #10b981;
+}
+
+input[type="radio"] {
+  accent-color: #10b981;
+}
+
+.cadastro__descricao {
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.ultimos__cadastros { 
+  display: flex;
+  flex-direction: column;
+}
+
+.ultimos__cadastros h2 {
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* TOAST DE SUCESSO */
+
+.toast {
+  display: none;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  max-width: 320px;
+  padding: 0.9rem 1rem;
+  background-color: #0f6e56;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  font-weight: 600;
+  z-index: 10;
+}
+
+.toast--visivel {
+  display: block;
+}
+
+.toast::before {
+  content: "✓ ";
+}
+
+.campo--erro {
+  border: 2px solid #b3261e;
+  background-color: #fdf3f2;
+}
+
+.campo--erro:focus {
+  outline: 2px solid #b3261e;
+  outline-offset: 2px;
+}
+
+.campo__erro {
+  display: block;
+  color: #b3261e;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.campo__erro:empty {
+  display: none;
+}
+
+/* ==========================================================================
+   ALTO CONTRASTE (Padrões eMAG / WCAG com especificidade blindada)
+   ========================================================================== */
+
+.botao__contraste {
+  background-color: transparent;
+  color: #ffffff; /* 🛠️ AJUSTADO: Mudado de verde para branco para dar leitura perfeita no seu header preto */
+  border: 2px solid #ffffff; /* 🛠️ AJUSTADO: Borda branca para destacar o botão no menu */
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+body.alto-contraste {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Força todas as seções estruturais do seu projeto a ficarem pretas */
+body.alto-contraste .cabecalho,
+body.alto-contraste .destaque,
+body.alto-contraste .numeros,
+body.alto-contraste .quem__somos,
+body.alto-contraste .parte__escura,
+body.alto-contraste .rodape,
+body.alto-contraste .menu__submenu {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Remove fundos verdes e destaca os cards/containers com borda branca */
+body.alto-contraste .numeros__item,
+body.alto-contraste .chamada__cadastro__container {
+  background-color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* Títulos importantes e métricas ganham o amarelo acessível */
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste .texto__principal,
+body.alto-contraste .texto__secundario,
+body.alto-contraste .numeros__valor,
+body.alto-contraste .chamada__cadastro__titulo {
+  color: #ffff00 !important;
+}
+
+/* Transforma botões verdes de ação em elementos de alto contraste */
+body.alto-contraste .menu__botao,
+body.alto-contraste .btn__ajudar,
+body.alto-contraste .btn__projetos,
+body.alto-contraste .chamada__cadastro__botao {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+  text-decoration: none !important;
+}
+
+/* Inverte a cor do próprio botão de contraste ao ser ativado */
+body.alto-contraste .botao__contraste {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Altera a linha verde de link ativo para amarelo */
+body.alto-contraste .menu__link-ativo {
+  border-bottom: 3px solid #ffff00 !important;
+  color: #ffff00 !important;
+}
+
+/* Acessibilidade de inputs, formulários e foco geral por teclado */
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
+}
