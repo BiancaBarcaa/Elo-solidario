@@ -1,5 +1,7 @@
  🤝 Elo Solidário
 
+🔗 **Site no ar:** https://biancabarcaa.github.io/Elo-solidario/ 🔗
+
 Este projeto consiste em um site institucional desenvolvido para a ONG fictícia Elo Solidário, com o objetivo de apresentar suas iniciativas sociais e facilitar o cadastro de pessoas interessadas em contribuir com doações ou trabalho voluntário.
 
 A aplicação foi construída com HTML5 semântico, CSS3 (estilização em andamento) e JavaScript puro (Vanilla JS), organizado em módulos ES6. O site funciona como uma Single Page Application (SPA), com navegação sem recarregar a página, geração dinâmica de componentes, validação de formulário em tempo real e persistência de dados no navegador.
