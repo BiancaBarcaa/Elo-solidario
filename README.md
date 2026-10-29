@@ -4,6 +4,8 @@ Este projeto consiste em um site institucional desenvolvido para a ONG fictícia
 
 A aplicação foi construída com HTML5 semântico, CSS3 (estilização em andamento) e JavaScript puro (Vanilla JS), organizado em módulos ES6. O site funciona como uma Single Page Application (SPA), com navegação sem recarregar a página, geração dinâmica de componentes, validação de formulário em tempo real e persistência de dados no navegador.
 
+🔗 Demo: https://biancabarcaa.github.io/Elo-solidario/
+
 🎯 Objetivo do Projeto
 
 Desenvolver um site organizado e funcional para apresentar uma instituição social, seus projetos e um formulário de cadastro para novos colaboradores.
